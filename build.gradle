@@ -1,19 +1,85 @@
 plugins {
     id 'java'
+    id 'maven-publish'
 }
 
-group 'org.example'
-version '1.0-SNAPSHOT'
+ext.configFile = file("build.txt")
+configFile.withReader {
+    def prop = new Properties()
+    prop.load(it)
+    project.ext.config = new ConfigSlurper().parse(prop)
+    project.ext.hasConfig = { String key ->
+        return config.isSet(key);
+    }
+}
+
+group 'org.zeith'
+version config.version
 
 repositories {
     mavenCentral()
+    maven {
+        name = "Zeitheron Maven"
+        url = "https://maven.zeith.org"
+    }
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation "org.zeith.libs:TupleLib:" + config.tuple_lib
 }
 
-test {
-    useJUnitPlatform()
+task shadedJar(type: Jar) {
+    manifest.from jar.manifest
+    classifier = 'shaded'
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    } {
+        exclude "META-INF/*.SF"
+        exclude "META-INF/*.DSA"
+        exclude "META-INF/*.RSA"
+    }
+    with jar
+}
+
+task srcJar(type: Jar, dependsOn: classes) {
+    from sourceSets.main.allSource
+    classifier = 'sources'
+}
+
+task javadocJar(type: Jar, dependsOn: classes) {
+    from javadoc
+    classifier = 'javadoc'
+}
+
+artifacts {
+    archives shadedJar
+    archives srcJar
+    archives javadocJar
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'org.zeith.libs'
+            artifactId = 'Configured'
+            version = config.version
+            from components.java
+
+            pom {
+                name = 'Configured'
+                description = 'Configuration library.'
+                dependencies {
+                    implementation 'org.zeith.libs:TupleLib:' + config.tuple_lib
+                }
+            }
+
+            artifact srcJar
+            artifact javadocJar
+        }
+    }
+    repositories {
+        maven {
+            url "file:///SERVER//Maven"
+        }
+    }
 }
