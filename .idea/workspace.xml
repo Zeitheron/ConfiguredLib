@@ -4,73 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01b0004e-1c2f-4548-b7cf-df38310329ae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/DEMO CONFIG FILE.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/ConfigFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/ConfigToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/ConfiguredLib.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/data/DecimalValueRange.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/data/IntValueRange.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/io/ConfigParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/io/IElementFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/io/IoConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/io/IoFunction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/io/IoNewLiner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/io/IoRunnable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/io/StringReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/io/UnsafeHax.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/io/buf/IByteBuf.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/io/buf/NioByteBuf.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/io/buf/WritingBuf.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/struct/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/struct/Comment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/struct/ConfigStructure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/struct/EntryString.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/struct/Name.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/struct/RangeDouble.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/struct/RangeFloat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/struct/RangeInt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/struct/RangeLong.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/struct/SetDefaults.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/struct/Unconfigurable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/struct/mappers/ArrayMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/struct/mappers/DecimalMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/struct/mappers/ITokenMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/struct/mappers/IntegerMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/struct/mappers/StringMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/struct/reflection/IField.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/struct/reflection/TriConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/types/ConfigArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/types/ConfigBoolean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/types/ConfigCategory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/types/ConfigDecimal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/types/ConfigObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/types/ConfigString.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestConfigStructure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="01b0004e-1c2f-4548-b7cf-df38310329ae" name="Changes" comment="Mark non-existing files as changed.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DEMO CONFIG FILE.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/DEMO CONFIG FILE.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zeith/configured/ConfigFile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zeith/configured/ConfigToken.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zeith/configured/ConfiguredLib.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zeith/configured/data/DecimalValueRange.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zeith/configured/data/IntValueRange.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zeith/configured/io/ConfigParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zeith/configured/io/IElementFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zeith/configured/io/IoNewLiner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zeith/configured/io/IoRunnable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zeith/configured/io/StringReader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zeith/configured/types/ConfigArray.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zeith/configured/types/ConfigBoolean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zeith/configured/types/ConfigCategory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zeith/configured/types/ConfigDecimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/types/ConfigInteger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zeith/configured/types/ConfigElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zeith/libs/configured/types/ConfigElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zeith/configured/types/ConfigInteger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zeith/configured/types/ConfigObject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zeith/configured/types/ConfigString.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestConfigs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestConfigs.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,14 +83,7 @@
       <recent name="org.zeith.configured.data" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestConfigs">
-    <configuration name="TestConfigs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TestConfigs" />
-      <module name="ConfiguredLib.test" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Gradle.ConfiguredLib [publish]">
     <configuration name="ConfiguredLib [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -175,11 +103,38 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="ConfiguredLib [publish]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="publish" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.ConfiguredLib [publish]" />
+      <item itemvalue="Gradle.ConfiguredLib [dependencies]" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestConfigs" />
+        <item itemvalue="Gradle.ConfiguredLib [publish]" />
         <item itemvalue="Gradle.ConfiguredLib [dependencies]" />
       </list>
     </recent_temporary>
@@ -193,10 +148,20 @@
       <option name="presentableId" value="Default" />
       <updated>1666739888085</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added configuration class deserialization.">
+      <created>1666886530371</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666886530371</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Added configuration class deserialization." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added configuration class deserialization." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ConfiguredLib$TestConfigs.ic" NAME="TestConfigs Coverage Results" MODIFIED="1666793941051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

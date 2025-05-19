@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Test;
 import org.zeith.libs.configured.ConfiguredLib;
 import org.zeith.libs.configured.data.DecimalValueRange;
 import org.zeith.libs.configured.data.IntValueRange;
@@ -14,7 +15,9 @@ import java.nio.file.Files;
 
 public class TestConfigs
 {
-	public static void main(String[] args)
+	@Test
+	public void main()
+			throws IOException
 	{
 		var cfg = ConfiguredLib.create(new File("DEMO CONFIG FILE.cfg"), false);
 		
@@ -55,24 +58,18 @@ public class TestConfigs
 			System.out.println("Changes detected, saved.");
 		}
 		
-		try
-		{
-			var pth = new File("DEMO CONFIG FILE.bin").toPath();
-			Files.write(pth, WritingBuf.encode(cfg::toBuffer));
-			
-			System.out.println("Wrote configs to binary file. Reading...");
+		var pth = new File("DEMO CONFIG FILE.bin").toPath();
+		Files.write(pth, WritingBuf.encode(cfg::toBuffer));
+		
+		System.out.println("Wrote configs to binary file. Reading...");
 //			cfg = ConfiguredLib.createInMemory(new NioByteBuf(ByteBuffer.wrap(Files.readAllBytes(pth))));
-			
-			System.out.println(cfg);
-			
-			var struct = ConfigStructure.createConfig(TestConfigStructure::new, cfg, true);
-			System.out.println(struct);
-			
-			if(cfg.hasChanged())
-				cfg.save();
-		} catch(IOException e)
-		{
-			e.printStackTrace();
-		}
+		
+		System.out.println(cfg);
+		
+		var struct = ConfigStructure.createConfig(TestConfigStructure::new, cfg, true);
+		System.out.println(struct);
+		
+		if(cfg.hasChanged())
+			cfg.save();
 	}
 }

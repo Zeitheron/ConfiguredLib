@@ -3,18 +3,7 @@ plugins {
     id 'maven-publish'
 }
 
-ext.configFile = file("build.txt")
-configFile.withReader {
-    def prop = new Properties()
-    prop.load(it)
-    project.ext.config = new ConfigSlurper().parse(prop)
-    project.ext.hasConfig = { String key ->
-        return config.isSet(key);
-    }
-}
-
 group 'org.zeith'
-version config.version
 
 repositories {
     mavenCentral()
@@ -25,10 +14,17 @@ repositories {
 }
 
 dependencies {
-    implementation "org.zeith.libs:TupleLib:" + config.tuple_lib
+    implementation "org.zeith.libs:TupleLib:$tuple_lib"
+
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
 }
 
-task shadedJar(type: Jar) {
+test {
+    useJUnitPlatform()
+}
+
+tasks.register('shadedJar', Jar) {
     manifest.from jar.manifest
     classifier = 'shaded'
     from {
@@ -41,12 +37,14 @@ task shadedJar(type: Jar) {
     with jar
 }
 
-task srcJar(type: Jar, dependsOn: classes) {
+tasks.register('srcJar', Jar) {
+    dependsOn classes
     from sourceSets.main.allSource
     classifier = 'sources'
 }
 
-task javadocJar(type: Jar, dependsOn: classes) {
+tasks.register('javadocJar', Jar) {
+    dependsOn classes
     from javadoc
     classifier = 'javadoc'
 }
@@ -62,14 +60,13 @@ publishing {
         maven(MavenPublication) {
             groupId = 'org.zeith.libs'
             artifactId = 'Configured'
-            version = config.version
             from components.java
 
             pom {
                 name = 'Configured'
                 description = 'Configuration library.'
                 dependencies {
-                    implementation 'org.zeith.libs:TupleLib:' + config.tuple_lib
+                    implementation "org.zeith.libs:TupleLib:$tuple_lib"
                 }
             }
 
@@ -79,7 +76,7 @@ publishing {
     }
     repositories {
         maven {
-            url "file:///SERVER//Maven"
+            url System.env.MAVEN_URL
         }
     }
 }
